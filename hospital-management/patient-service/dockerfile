@@ -1,8 +1,11 @@
+# Use an official OpenJDK runtime as a parent image
+FROM openjdk:11-jre-slim
+
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the application JAR file
-COPY . /app
+# Copy the application JAR file into the container
+COPY target/patient-service-0.0.1-SNAPSHOT.jar /app/patient-service.jar
 
-# Start the application
+# Run the application
 CMD ["java", "-jar", "/app/patient-service.jar"]
