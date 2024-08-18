@@ -1,5 +1,5 @@
-# Use an appropriate base image from GHCR
-FROM ghcr.io/your-org/openjdk:17-jdk
+# Use an appropriate base image from Docker Hub
+FROM openjdk:17-jdk
 
 # Set the working directory inside the container
 WORKDIR /app
